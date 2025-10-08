@@ -1,0 +1,18 @@
+node:
+  id: 1
+  callsign: "ROAM-01"
+  role: "coordinator"
+
+radio:
+  frequency: 433500000
+  mode: "freedv_700d"
+  tx_power: 10
+
+audio:
+  input_device: "default"
+  output_device: "default"
+  sample_rate: 8000
+
+network:
+  beacon_interval: 30
+  buddy_timeout: 300
