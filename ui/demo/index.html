@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoamEN - Emergency Communication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">📡</span>
+                <h1>RoamEN</h1>
+            </div>
+            <div class="status-bar">
+                <div class="node-status">
+                    <span class="status-indicator active"></span>
+                    <span>Node #1042</span>
+                </div>
+                <div class="network-status">
+                    <span>🔋 12h 34m</span>
+                    <span>📶 5 nodes</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="nav-menu">
+                    <button class="nav-item active" data-view="messages">
+                        <span class="nav-icon">💬</span>
+                        <span>Messages</span>
+                    </button>
+                    <button class="nav-item" data-view="alerts">
+                        <span class="nav-icon">🚨</span>
+                        <span>Alerts</span>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="nav-item" data-view="voice">
+                        <span class="nav-icon">🎙️</span>
+                        <span>Voice</span>
+                    </button>
+                    <button class="nav-item" data-view="network">
+                        <span class="nav-icon">🌐</span>
+                        <span>Network</span>
+                    </button>
+                </nav>
+
+                <div class="quick-alert">
+                    <h3>Quick Alert</h3>
+                    <div class="alert-buttons">
+                        <button class="alert-btn standard" data-type="standard">Standard</button>
+                        <button class="alert-btn urgent" data-type="urgent">Urgent</button>
+                        <button class="alert-btn emergency" data-type="emergency">Emergency</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main View -->
+            <main class="main-view">
+                <!-- Messages View -->
+                <div id="messages-view" class="view active">
+                    <div class="view-header">
+                        <h2>Messages</h2>
+                        <button class="btn-new">+ New Message</button>
+                    </div>
+                    <div class="message-list" id="message-list">
+                        <!-- Messages will be added here -->
+                    </div>
+                    <div class="message-input">
+                        <input type="text" id="msg-input" placeholder="Type a message...">
+                        <button id="send-btn">Send</button>
+                    </div>
+                </div>
+
+                <!-- Alerts View -->
+                <div id="alerts-view" class="view">
+                    <div class="view-header">
+                        <h2>Alerts</h2>
+                    </div>
+                    <div class="alert-list" id="alert-list">
+                        <!-- Alerts will be added here -->
+                    </div>
+                </div>
+
+                <!-- Voice View -->
+                <div id="voice-view" class="view">
+                    <div class="view-header">
+                        <h2>Voice Communication</h2>
+                    </div>
+                    <div class="voice-panel">
+                        <div class="voice-status">
+                            <div class="voice-indicator"></div>
+                            <p id="voice-status-text">Ready</p>
+                        </div>
+                        <div class="voice-controls">
+                            <button id="ptt-btn" class="ptt-button">
+                                <span class="ptt-icon">🎤</span>
+                                <span>Push to Talk</span>
+                            </button>
+                        </div>
+                        <div class="voice-info">
+                            <p><strong>Codec:</strong> Codec2 700bps</p>
+                            <p><strong>Quality:</strong> Intelligible</p>
+                            <p><strong>Channel:</strong> 433.500 MHz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network View -->
+                <div id="network-view" class="view">
+                    <div class="view-header">
+                        <h2>Network Mesh</h2>
+                    </div>
+                    <div class="network-panel">
+                        <div class="network-viz" id="network-viz">
+                            <!-- Network visualization will be rendered here -->
+                        </div>
+                        <div class="node-list">
+                            <h3>Connected Nodes</h3>
+                            <div class="node-item">
+                                <span class="node-indicator active"></span>
+                                <span><strong>Node #1042</strong> (This device)</span>
+                            </div>
+                            <div class="node-item">
+                                <span class="node-indicator active"></span>
+                                <span>Node #1001 - Relay Station A</span>
+                            </div>
+                            <div class="node-item">
+                                <span class="node-indicator active"></span>
+                                <span>Node #2056 - Staff Portable</span>
+                            </div>
+                            <div class="node-item">
+                                <span class="node-indicator active"></span>
+                                <span>Node #3021 - Emergency Response</span>
+                            </div>
+                            <div class="node-item">
+                                <span class="node-indicator active"></span>
+                                <span>Node #1003 - Relay Station C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="alert-modal" class="modal">
+        <div class="modal-content alert-modal-content">
+            <div class="alert-modal-header"></div>
+            <div class="alert-modal-body">
+                <h2 id="alert-modal-title"></h2>
+                <p id="alert-modal-message"></p>
+                <p class="alert-modal-source" id="alert-modal-source"></p>
+            </div>
+            <button class="alert-modal-close" onclick="closeAlertModal()">Acknowledge</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoamEN UI Demo - Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #111827;
+            color: #f9fafb;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2563eb;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.875rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        .btn.secondary {
+            background: #1f2937;
+            border: 2px solid #374151;
+        }
+
+        .btn.secondary:hover {
+            background: #374151;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot {
+            background: #1f2937;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 2px solid #374151;
+            transition: all 0.3s;
+        }
+
+        .screenshot:hover {
+            border-color: #2563eb;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-info {
+            padding: 1rem;
+        }
+
+        .screenshot-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #f9fafb;
+        }
+
+        .screenshot-desc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+
+        .gif-section {
+            margin: 3rem 0;
+            text-align: center;
+            background: #1f2937;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            border: 2px solid #374151;
+        }
+
+        .gif-section h2 {
+            margin-bottom: 1.5rem;
+            color: #2563eb;
+        }
+
+        .gif-section img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: #1f2937;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px solid #374151;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📡 RoamEN UI Demo</h1>
+            <p class="subtitle">Emergency Communication System - Interactive Demonstration</p>
+
+            <div class="links">
+                <a href="index.html" class="btn">🚀 Launch Interactive Demo</a>
+                <a href="README.md" class="btn secondary">📖 Read Documentation</a>
+                <a href="DEMO_OVERVIEW.md" class="btn secondary">📋 Demo Overview</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value">57s</div>
+                    <div class="stat-label">Demo Duration</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">Screenshots</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">356KB</div>
+                    <div class="stat-label">GIF Size</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1280×720</div>
+                    <div class="stat-label">Resolution</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="gif-section">
+            <h2>🎬 Animated Demo (GIF)</h2>
+            <img src="roamen-demo.gif" alt="RoamEN UI Demo Animation">
+            <p style="margin-top: 1rem; color: #9ca3af;">50-second automated demonstration showing all key features</p>
+        </div>
+
+        <h2 style="text-align: center; margin: 3rem 0 2rem; font-size: 2rem;">📸 Screenshot Gallery</h2>
+
+        <div class="gallery">
+            <div class="screenshot">
+                <img src="screenshots/01-startup.png" alt="Startup Screen">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">1. Startup Screen</div>
+                    <div class="screenshot-desc">Initial UI showing RoamEN branding, status bar, and navigation</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/02-messages.png" alt="Message Exchange">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">2. Message Exchange</div>
+                    <div class="screenshot-desc">Text messaging between nodes with timestamps and sender identification</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/03-standard-alert.png" alt="Standard Alert">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">3. Standard Alert</div>
+                    <div class="screenshot-desc">Regular check-in alert notification from control center</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/04-alerts-view.png" alt="Alerts View">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">4. Alerts View</div>
+                    <div class="screenshot-desc">Alert management interface with priority-based styling</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/05-urgent-alert.png" alt="Urgent Alert">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">5. Urgent Alert</div>
+                    <div class="screenshot-desc">Power failure alert with urgent priority (orange)</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/06-voice-communication.png" alt="Voice Communication">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">6. Voice Communication</div>
+                    <div class="screenshot-desc">Push-to-talk interface with Codec2 technical information</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/07-network-mesh.png" alt="Network Mesh">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">7. Network Mesh</div>
+                    <div class="screenshot-desc">Visual network topology showing connected nodes and relay stations</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/08-emergency-alert.png" alt="Emergency Alert">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">8. Emergency Alert</div>
+                    <div class="screenshot-desc">CODE RED emergency modal with full-screen overlay</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/09-alerts-list.png" alt="Alerts List">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">9. Full Alerts List</div>
+                    <div class="screenshot-desc">Complete alert history with all priority levels</div>
+                </div>
+            </div>
+
+            <div class="screenshot">
+                <img src="screenshots/10-final-messages.png" alt="Final Messages">
+                <div class="screenshot-info">
+                    <div class="screenshot-title">10. Final Coordination</div>
+                    <div class="screenshot-desc">Team coordination messages during emergency response</div>
+                </div>
+            </div>
+        </div>
+
+        <footer style="text-align: center; margin-top: 4rem; padding: 2rem; border-top: 2px solid #374151;">
+            <p style="color: #9ca3af; margin-bottom: 1rem;">
+                RoamEN - Roaming Emergency Network<br>
+                Emergency SDR communication system with digital voice and selective alerting
+            </p>
+            <p style="color: #6b7280; font-size: 0.875rem;">
+                GPL-3.0 License | <a href="https://github.com/mb43/roamen" style="color: #2563eb;">GitHub Repository</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
